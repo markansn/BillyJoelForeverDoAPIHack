@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "UCL Assistant",
+    "description": "One beautiful app to manage your life at UCL.",
+    "slug": "ucl-assistant",
+    "privacy": "public",
+    "sdkVersion": "32.0.0",
+    "version": "0.6.5",
+    "orientation": "portrait",
+    "primaryColor": "#1B998B",
+    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.uclapi.uclassistant"
+    },
+    "android": {
+      "package": "com.uclapi.uclassistant",
+      "adaptiveIcon": {
+        "backgroundImage": "./assets/images/icon-bg.png",
+        "foregroundImage": "./assets/images/icon-fg.png"
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "<change-me>"
+        }
+      }
+    },
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "matt-bell",
+            "project": "ucl-assistant-server",
+            "authToken": "<change-me>"
+          }
+        }
+      ]
+    },
+    "scheme": "uclassistant"
+  }
+}
